@@ -139,7 +139,7 @@
         <!-- Search Bar -->
         <div class="relative">
             <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
-            <input type="text" id="searchInput" oninput="handleSearch()" placeholder="Search item (e.g., Cp mid wings, Atta, Milk, Tea)..." 
+            <input type="text" id="searchInput" oninput="handleSearch()" placeholder="Search item (e.g., Cp mid wings, Atta, Milk, Paratha)..." 
                    class="w-full bg-slate-800/90 border border-slate-700/80 rounded-xl pl-10 pr-10 py-3 text-sm text-slate-100 placeholder-slate-400 focus:outline-none focus:border-sky-500 transition-colors shadow-inner">
             <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-200 p-2">
                 <i class="fa-solid fa-xmark"></i>
@@ -152,7 +152,7 @@
             <button onclick="filterCategory('flour')" id="tab-flour" class="tab-btn px-3 py-2 whitespace-nowrap text-slate-400 hover:text-slate-200 transition-colors">Flour & Dals</button>
             <button onclick="filterCategory('spices')" id="tab-spices" class="tab-btn px-3 py-2 whitespace-nowrap text-slate-400 hover:text-slate-200 transition-colors">Spices & Oil</button>
             <button onclick="filterCategory('snacks')" id="tab-snacks" class="tab-btn px-3 py-2 whitespace-nowrap text-slate-400 hover:text-slate-200 transition-colors">Drinks & Snacks</button>
-            <button onclick="filterCategory('frozen')" id="tab-frozen" class="tab-btn px-3 py-2 whitespace-nowrap text-slate-400 hover:text-slate-200 transition-colors">Frozen & Tea</button>
+            <button onclick="filterCategory('frozen')" id="tab-frozen" class="tab-btn px-3 py-2 whitespace-nowrap text-slate-400 hover:text-slate-200 transition-colors">Frozen & Poultry</button>
         </div>
 
         <!-- Inventory List -->
@@ -217,9 +217,9 @@
     </div>
 
     <script>
-        // Exact master list provided by user
+        // Complete 93-item master list provided by user (Agraman ti amin a Frozen & Poultry Items!)
         const inventory = [
-            // --- Category: Flour & Dals ---
+            // --- Flour, Dals & Grain ---
             { id: 1, name: "Atta 10kg", category: "flour", price: 100, studentPrice: 90, offer: null },
             { id: 2, name: "Atta 9kg", category: "flour", price: 90, studentPrice: 81, offer: null },
             { id: 3, name: "Atta 5kg", category: "flour", price: 70, studentPrice: 60, offer: "$60 Special Offer" },
@@ -237,7 +237,7 @@
             { id: 15, name: "Red kidney beans", category: "flour", price: 25, studentPrice: 22, offer: null },
             { id: 16, name: "Sookha dhaniya", category: "flour", price: 25, studentPrice: 22, offer: null },
 
-            // --- Category: Spices & Oil ---
+            // --- Spices & Oil ---
             { id: 17, name: "Corn oil 1.8L", category: "spices", price: 60, studentPrice: 58, offer: null },
             { id: 18, name: "Corn oil 5l", category: "spices", price: 100, studentPrice: 95, offer: null },
             { id: 19, name: "Olive oil 5l", category: "spices", price: 225, studentPrice: 215, offer: null },
@@ -270,7 +270,7 @@
             { id: 46, name: "Mint chutney", category: "spices", price: 15, studentPrice: 13, offer: null },
             { id: 47, name: "Mayonese", category: "spices", price: 20, studentPrice: 18, offer: null },
 
-            // --- Category: Drinks & Snacks ---
+            // --- Drinks & Snacks ---
             { id: 48, name: "Basil seed drink", category: "snacks", price: 10, studentPrice: 8, offer: "$15 for 2 pcs" },
             { id: 49, name: "Ducthaldy chocolate milk", category: "snacks", price: 7, studentPrice: 6, offer: null },
             { id: 50, name: "Jan fruit drink", category: "snacks", price: 10, studentPrice: 8, offer: null },
@@ -296,7 +296,7 @@
             { id: 70, name: "Biscuits", category: "snacks", price: 5, studentPrice: 4, offer: "$25 / Box" },
             { id: 71, name: "Dates 1kg", category: "snacks", price: 30, studentPrice: 27, offer: null },
 
-            // --- Category: Frozen & Tea ---
+            // --- Frozen & Poultry (Mensa ken nakasagana!) ---
             { id: 72, name: "Fresh chicken", category: "frozen", price: 50, studentPrice: 45, offer: "$140 for 3 pcs" },
             { id: 73, name: "Boneless chicken", category: "frozen", price: 60, studentPrice: 50, offer: "$100 for 2 pcs" },
             { id: 74, name: "Minced chicken", category: "frozen", price: 30, studentPrice: 27, offer: null },
